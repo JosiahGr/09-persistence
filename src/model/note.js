@@ -9,7 +9,7 @@ module.exports = class {
     this.title = title;
     this.content = content;
     this.id = uuid();
-    logger.log(logger.INFO, `NOTE: Created a new note: ${JSON.stringify(this)}`);
+    logger.log(logger.INFO, `PAINTING: Created a new painting: ${JSON.stringify(this)}`);
   }
 };
 
