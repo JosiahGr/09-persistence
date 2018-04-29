@@ -29,6 +29,12 @@ storage.fetchOne = function fetchOne(schema, id) {
   });
 };
 
+//return fs.readdirProm('needs some argument in here, read thedocs)
+// .then((something) => {
+  // .catch((err) => {
+  // })
+// })
+
 storage.fetchAll = function fetchAll(schema) {
   return new Promise((resolve, reject) => {
     if (!schema) return reject(new Error('expected schema name'));
