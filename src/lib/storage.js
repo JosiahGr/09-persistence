@@ -29,18 +29,24 @@ storage.fetchOne = function fetchOne(schema, id) {
   });
 };
 
+//return fs.readdirProm('needs some argument in here, read thedocs)
+// .then((something) => {
+  // .catch((err) => {
+  // })
+// })
+
 storage.fetchAll = function fetchAll(schema) {
   return new Promise((resolve, reject) => {
     if (!schema) return reject(new Error('expected schema name'));
     if (!memory[schema]) return reject(new Error('schema not found'));
     
     const allItems = Object.values(memory[schema]);
-    const notes = allItems.map(note => note.id);
+    const paintings = allItems.map(painting => painting.id);
     
-    if (!notes) {
+    if (!paintings) {
       return reject(new Error('object not found'));
     }
-    return resolve(notes);
+    return resolve(paintings);
   });
 };
 
